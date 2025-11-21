@@ -8,6 +8,10 @@ The system consists of two independent microservices:
 2.  **Consumer Service:** Consumes orders, calculates a real-time running average of prices, and handles failures gracefully.
 
 ---
+## WorkFlow Diagram
+![Workflow Diagram](workflow.png)
+
+---
 
 ## 🛠️ Technologies Used
 * **Java 17**
