@@ -18,7 +18,10 @@ public class OrderConsumerService {
         Order order = record.value();
         double price = order.getPrice();
 
-
+        if (price > 90.00) {
+            System.out.printf(" High Value Order Detect ($%.2f) - SIMULATING CRASH!%n", price);
+            throw new RuntimeException("Simulated Database Failure for expensive item!");
+        }
         synchronized (this) {
             totalOrderCount++;
             totalPriceSum += price;
